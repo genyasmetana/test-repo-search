@@ -11,9 +11,10 @@ import { SearchBlock } from './components/searchBox'
 export const ReposList = () => {
   const [localStorageItems, addLocalStorageItem, removeLocalStorageItem] =
     useLocalStorage('favorite')
+
   const [search, setSearch] = useState('language:react stars:>1000')
 
-  const { loading, data } = useQuery(GET_REPOSITORIES, {
+  const { loading, error, data } = useQuery(GET_REPOSITORIES, {
     variables: {
       query: search,
     },
@@ -51,7 +52,8 @@ export const ReposList = () => {
     <div>
       <h1>List</h1>
       <SearchBlock searchHandler={setSearch} searchValue={search} />
-      {loading ? (
+      {error && <div>Ooops somethings went wrong</div>}
+      {loading && !error ? (
         <Loader />
       ) : nodes?.length ? (
         <RepositoryTable

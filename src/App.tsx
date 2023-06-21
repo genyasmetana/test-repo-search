@@ -1,7 +1,5 @@
 import { Routes, Route } from 'react-router-dom'
 
-import './App.css'
-
 import { Layout } from './common'
 import { ReposList } from './modules/repos-list/ReposList'
 import { ReposFavorite } from './modules/repos-favorite/ReposFavorite'
