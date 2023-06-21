@@ -1,6 +1,5 @@
 import { ChangeEvent, FC } from 'react'
 import TextField from '@mui/material/TextField'
-
 interface ISearchBlock {
   searchValue: string
   searchHandler(searchValue: string): void
