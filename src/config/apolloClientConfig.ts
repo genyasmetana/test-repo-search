@@ -1,13 +1,14 @@
 import { ApolloClient, createHttpLink, InMemoryCache } from '@apollo/client'
 
-const TOKEN =
-  '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'
+// TODO REPLACE THIS TOKEN VALUE TO HAVE AN ABILITY TO CALL GIT API
+const PERSONAL_ACCESS_TOKEN = ''
+
 const cache = new InMemoryCache({})
 
 const link = createHttpLink({
   uri: 'https://api.github.com/graphql',
   headers: {
-    Authorization: `bearer ${TOKEN}`,
+    Authorization: `bearer ${PERSONAL_ACCESS_TOKEN}`,
   },
 })
 

@@ -11,14 +11,12 @@ export const SearchBlock: FC<ISearchBlock> = ({ searchValue, searchHandler }) =>
   }
 
   return (
-    <div>
-      <TextField
-        fullWidth
-        id='standard-basic'
-        label='Repositories'
-        value={searchValue}
-        onChange={onChangeHandler}
-      />
-    </div>
+    <TextField
+      fullWidth
+      id='standard-basic'
+      label='Repositories'
+      value={searchValue}
+      onChange={onChangeHandler}
+    />
   )
 }

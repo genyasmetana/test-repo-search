@@ -2,16 +2,15 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-To setup this project you need to have a node version
+## Preconditions
 
-## Available Scripts
+To setup this project you need to have a
 
-In the project directory, you can run:
+- node version `v16+`
 
-### `npm start`
+After installing all dependencies you need:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- generate `PERSONAL_ACCESS_TOKEN` (in scope of the login wasn't implemented)
+- add this token to the project file `src/config/apolloClientConfig.ts`
+- `PERSONAL_ACCESS_TOKEN` the value of this variable should be your access token
+- then in the project folder run command `npm start`
